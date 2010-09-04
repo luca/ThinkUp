@@ -1,7 +1,9 @@
 <div class="">
-  {if $description}
+  {if $logged_in_user}
      <a href="#" class="grid_search" title="Search" onclick="return false;">
      <img src="{$site_root_path}assets/img/search-icon.gif" id="grid_search_icon"></a>
+  {/if}
+  {if $description}
      <i>{$description}</i>
      
   {/if}

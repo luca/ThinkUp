@@ -119,7 +119,7 @@ class TestOfInlineViewController extends ThinkUpUnitTestCase {
 
         //test if view variables were set correctly
         $v_mgr = $controller->getViewManager();
-        $this->assertEqual($v_mgr->getTemplateDataItem('header'), 'All', 'Header');
+        $this->assertEqual($v_mgr->getTemplateDataItem('header'), 'All Tweets', 'Header');
         $this->assertEqual($v_mgr->getTemplateDataItem('description'), 'All tweets', 'Description');
         $this->assertIsA($v_mgr->getTemplateDataItem('all_tweets'), 'array', 'Array of tweets');
         $this->assertEqual(sizeof($v_mgr->getTemplateDataItem('all_tweets')), 15, '15 posts in listing');
@@ -142,7 +142,7 @@ class TestOfInlineViewController extends ThinkUpUnitTestCase {
 
         //test if view variables were set correctly
         $v_mgr = $controller->getViewManager();
-        $this->assertEqual($v_mgr->getTemplateDataItem('header'), 'All', 'Header');
+        $this->assertEqual($v_mgr->getTemplateDataItem('header'), 'All Tweets', 'Header');
         $this->assertEqual($v_mgr->getTemplateDataItem('description'), 'All tweets', 'Description');
         $this->assertIsA($v_mgr->getTemplateDataItem('all_tweets'), 'array', 'Array of tweets');
         $this->assertEqual(sizeof($v_mgr->getTemplateDataItem('all_tweets')), 15, '15 posts in listing');
@@ -166,7 +166,8 @@ class TestOfInlineViewController extends ThinkUpUnitTestCase {
         //test if view variables were set correctly
         $v_mgr = $controller->getViewManager();
         $this->assertEqual($v_mgr->getTemplateDataItem('header'), 'Conversations', 'Header');
-        $this->assertEqual($v_mgr->getTemplateDataItem('description'), '', 'Description');
+        $this->assertEqual($v_mgr->getTemplateDataItem('description'), 'Exchanges between you and other users',
+        'Description');
         $this->assertIsA($v_mgr->getTemplateDataItem('author_replies'), 'array', 'Array of tweets');
         $this->assertEqual(sizeof($v_mgr->getTemplateDataItem('author_replies')), 1, '1 posts in listing');
 
